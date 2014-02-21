@@ -1,5 +1,5 @@
-Vagrant Drupal Development
-==========================
+Vagrant Development Environment
+===============================
 
 Vagrant Development Environment (VDE)is fully configured and ready to use
 development environment built on Linux (Ubuntu 12) with Vagrant, VirbualBox and
