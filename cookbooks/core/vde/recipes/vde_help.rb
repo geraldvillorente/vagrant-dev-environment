@@ -1,5 +1,5 @@
 template "/var/www/index.html" do
-  source "vdd_help.html.erb"
+  source "vde_help.html.erb"
   variables(
     :sites => node["sites"]
   )

@@ -14,8 +14,8 @@ file "/etc/php5/conf.d/xhprof.ini" do
   only_if { File.exists?("/etc/php5/conf.d/xhprof.ini") }
 end
 
-template "/etc/php5/conf.d/vdd_xhprof.ini" do
-  source "vdd_xhprof.ini.erb"
+template "/etc/php5/conf.d/vde_xhprof.ini" do
+  source "vde_xhprof.ini.erb"
   mode "0644"
   notifies :restart, "service[apache2]", :delayed
 end
@@ -26,8 +26,8 @@ file "/etc/apache2/conf.d/xhprof.conf" do
   only_if { File.exists?("/etc/apache2/conf.d/xhprof.conf") }
 end
 
-template "/etc/apache2/conf.d/vdd_xhprof.conf" do
-  source "vdd_xhprof.conf.erb"
+template "/etc/apache2/conf.d/vde_xhprof.conf" do
+  source "vde_xhprof.conf.erb"
   mode "0644"
   notifies :restart, "service[apache2]", :delayed
 end
@@ -36,19 +36,19 @@ if node["sites"]
   node["sites"].each do |index, site|
 
     execute "devel_xhprof_directory" do
-      cwd "/var/www/#{index}/sites/vdd"
+      cwd "/var/www/#{index}/sites/vde"
       command "drush vset devel_xhprof_directory '/usr/share/php' -y"
       action :run
     end
 
     execute "devel_xhprof_enabled" do
-      cwd "/var/www/#{index}/sites/vdd"
+      cwd "/var/www/#{index}/sites/vde"
       command "drush vset devel_xhprof_enabled 1 -y"
       action :run
     end
 
     execute "devel_xhprof_url" do
-      cwd "/var/www/#{index}/sites/vdd"
+      cwd "/var/www/#{index}/sites/vde"
       command "drush vset devel_xhprof_url '/xhprof_html' -y"
       action :run
     end

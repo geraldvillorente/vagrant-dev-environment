@@ -23,8 +23,8 @@ web_app "localhost" do
   template "localhost.conf.erb"
 end
 
-template "/etc/apache2/conf.d/vdd_apache.conf" do
-  source "vdd_apache.conf.erb"
+template "/etc/apache2/conf.d/vde_apache.conf" do
+  source "vde_apache.conf.erb"
   mode "0644"
   notifies :restart, "service[apache2]", :delayed
 end

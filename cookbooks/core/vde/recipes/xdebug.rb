@@ -8,8 +8,8 @@ file "/etc/php5/conf.d/xdebug.ini" do
   only_if { File.exists?("/etc/php5/conf.d/xdebug.ini") }
 end
 
-template "/etc/php5/conf.d/vdd_xdebug.ini" do
-  source "vdd_xdebug.ini.erb"
+template "/etc/php5/conf.d/vde_xdebug.ini" do
+  source "vde_xdebug.ini.erb"
   mode "0644"
   notifies :restart, "service[apache2]", :delayed
 end

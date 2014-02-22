@@ -17,14 +17,14 @@ if node["sites"]
 
     # Enable the coder module using Drush
     execute "install_coder" do
-      cwd "/var/www/#{index}/sites/vdd"
+      cwd "/var/www/#{index}/sites/vde"
       command "drush en coder --yes"
       action :run
     end
 
     # Enable the coder module using Drush
     execute "install_coder_review" do
-      cwd "/var/www/#{index}/sites/vdd"
+      cwd "/var/www/#{index}/sites/vde"
       command "drush en coder_review --yes"
       action :run
     end

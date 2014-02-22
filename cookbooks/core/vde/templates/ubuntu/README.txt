@@ -1,2 +1,2 @@
 You can copy templates which you want to override from default folder into this
-folder. For example, see vdd-php.ini.erb. It's overriden.
+folder. For example, see vde-php.ini.erb. It's overriden.

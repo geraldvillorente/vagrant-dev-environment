@@ -21,8 +21,8 @@ pkgs.each do |pkg|
   end
 end
 
-template "/etc/php5/apache2/conf.d/vdd_php.ini" do
-  source "vdd_php.ini.erb"
+template "/etc/php5/apache2/conf.d/vde_php.ini" do
+  source "vde_php.ini.erb"
   mode "0644"
   notifies :restart, "service[apache2]", :delayed
 end

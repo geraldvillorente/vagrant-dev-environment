@@ -1,5 +1,5 @@
 {
-  "hostname" : "vdd",
+  "hostname" : "vde",
   "ip": "192.168.44.44",
   "memory": "1024",
   "synced_folder": {
@@ -35,6 +35,6 @@
     }
   },
   "custom_roles": [
-    "vdd_example"
+    "vde_example"
   ]
 }

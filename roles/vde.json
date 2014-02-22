@@ -1,0 +1,34 @@
+{
+  "name": "vde",
+  "env_run_lists": {},
+  "default_attributes": {
+    "mysql": {
+      "server_repl_password": "root",
+      "server_debian_password": "root"
+    }
+  },
+  "override_attributes": {},
+  "json_class": "Chef::Role",
+  "run_list": [
+    "recipe[apt]",
+    "recipe[apache2]",
+    "recipe[mysql::client]",
+    "recipe[mysql::server]",
+    "recipe[vde::bash]",
+    "recipe[vde::apache]",
+    "recipe[vde::php]",
+    "recipe[vde::drush]",
+    "recipe[vde::PHP_CodeSniffer]",
+    "recipe[vde::phpmyadmin]",
+    "recipe[vde::mysql]",
+    "recipe[vde::xdebug]",
+    "recipe[vde::git]",
+    "recipe[vde::mc]",
+    "recipe[vde::rsync]",
+    "recipe[vde::curl]",
+    "recipe[vde::vim]",
+    "recipe[vde::svn]"
+  ],
+  "description": "VDD Apache, PHP, MySQL plus other tools configuration.",
+  "chef_type": "role"
+}
